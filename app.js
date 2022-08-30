@@ -55,15 +55,15 @@ function drawPackages() {
 
   packages.forEach(package => {
     template += `
-    <div class="row border mt-3 p-3 d-flex flex-row">
+    <div class="row border bg-dark text-light mt-3 p-3 d-flex flex-row">
         <div class="col-1">
-          <h1>To:</h1>
+          <h3 class="text-danger">To:</h3>
         </div>
         <div class="col-6">
-          <h1>${package.to}</h1>
+          <h3>${package.to}</h3>
         </div>
-        <div class="col-2"><h1>ID:</h1></div>
-        <div class="col-3"><h1>${package.priorityLevel}</h1></div>
+        <div class="col-2"><h3 class="text-danger">ID:</h3></div>
+        <div class="col-3"><h3>${package.priorityLevel}</h3></div>
       </div>
     `
   })
@@ -77,15 +77,15 @@ function drawHeavyPackages() {
   packages.forEach(package => {
     if (package.weight >= 5) {
       template += `
-    <div class="row border mt-3 p-3 d-flex flex-row">
+    <div class="row border bg-dark text-light mt-3 p-3 d-flex flex-row">
         <div class="col-1">
-          <h1>To:</h1>
+          <h3 class="text-danger">To:</h3>
         </div>
         <div class="col-6">
-          <h1>${package.to}</h1>
+          <h3>${package.to}</h3>
         </div>
-        <div class="col-2"><h1>ID:</h1></div>
-        <div class="col-3"><h1>${package.priorityLevel}</h1></div>
+        <div class="col-2"><h3 class="text-danger">ID:</h3></div>
+        <div class="col-3"><h3>${package.priorityLevel}</h3></div>
       </div>
     `
     }
@@ -106,15 +106,15 @@ function drawPriorityPackages() {
   packages.forEach(package => {
     if (package.priorityLevel == 'express') {
       template += `
-    <div class="row border mt-3 p-3 d-flex flex-row">
+    <div class="row border bg-dark text-light mt-3 p-3 d-flex flex-row">
         <div class="col-1">
-          <h1>To:</h1>
+          <h3 class="text-danger">To:</h3>
         </div>
         <div class="col-6">
-          <h1>${package.to}</h1>
+          <h3>${package.to}</h3>
         </div>
-        <div class="col-2"><h1>ID:</h1></div>
-        <div class="col-3"><h1>${package.priorityLevel}</h1></div>
+        <div class="col-2"><h3 class="text-danger">ID:</h3></div>
+        <div class="col-3"><h3>${package.priorityLevel}</h3></div>
       </div>
     `
     }
@@ -133,15 +133,15 @@ function drawFragilePackages() {
   packages.forEach(package => {
     if (package.isFragile == true) {
       template += `
-    <div class="row border mt-3 p-3 d-flex flex-row">
+    <div class="row border bg-dark text-light mt-3 p-3 d-flex flex-row">
         <div class="col-1">
-          <h1>To:</h1>
+          <h3 class="text-danger">To:</h3>
         </div>
         <div class="col-6">
-          <h1>${package.to}</h1>
+          <h3>${package.to}</h3>
         </div>
-        <div class="col-2"><h1>ID:</h1></div>
-        <div class="col-3"><h1>${package.priorityLevel}</h1></div>
+        <div class="col-2"><h3 class="text-danger">ID:</h3></div>
+        <div class="col-3"><h3>${package.priorityLevel}</h3></div>
       </div>
     `
     }
